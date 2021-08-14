@@ -1,4 +1,3 @@
-import { exp } from 'prelude-ls';
 import React, { useEffect, useState } from 'react';
 import { getList } from '../Services/list.js'
 
