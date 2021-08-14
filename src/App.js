@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React, { useEffect, useState } from 'react';
+import { getList, getUsers } from './Services/list'
+
+import Header from './Components/header.jsx'
+import Main from './Components/main.jsx'
+
 function App() {
+  const [users, setUsers] = useState([]);
+
+    useEffect(()=>{
+        let mounted = true;
+        getUsers()
+        .then(items => {
+            if(mounted) {
+            setUsers(items);
+            }
+        });
+        return () => mounted = false;
+    }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header/>
+      <Main/>
+    </React.Fragment>
   );
 }
 

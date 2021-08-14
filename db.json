@@ -1,0 +1,11 @@
+{
+    "list" : [
+        {"id" : 1, "item": "Lipitor"},
+        {"id" : 2, "item": "Aspirin"}
+    ],
+
+    "users": [
+        {"id":1, "name": "Kevin"}
+
+    ]
+}
