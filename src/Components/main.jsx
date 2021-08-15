@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { getList } from '../Services/list.js'
+import { getUsers } from '../Services/list.js'
 
 const Main = () => {
-    const [list, setList] = useState([]);
+    const [users, setUsers] = useState([]);
 
     useEffect(()=>{
         let mounted = true;
-        getList()
+        getUsers()
         .then(items => {
             if(mounted) {
-            setList(items);
+            setUsers(items);
             }
         });
         return () => mounted = false;
@@ -17,9 +17,9 @@ const Main = () => {
 
     return (
       <div className='wrapper'>
-        <h1>List</h1>
+        <h1>Users</h1>
         <ul>
-          {list.map(item=><li key={item.item}>{item.item}</li>)}
+          {users.map(item=><li key={item.id}>{item.name}</li>)}
         </ul>
       </div>
     )

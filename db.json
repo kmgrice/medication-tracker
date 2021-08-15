@@ -5,7 +5,10 @@
     ],
 
     "users": [
-        {"id":1, "name": "Kevin"}
+        {
+            "id": 1, 
+            "name": "Kevin"
+        }
 
     ]
 }

@@ -18,7 +18,7 @@ const User = () => {
 
     return (
         <div style={{display:'inline'}}>
-            <span>User: {user.name}</span>
+            <span>User: </span>
         </div>
     )
 };
