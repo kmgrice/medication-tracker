@@ -3,14 +3,14 @@ import { getUsers } from '../Services/list'
 
 
 const User = () => {
-   const [users, setUsers] = useState([]);
+    const [user, setUser] = useState(null);
 
     useEffect(()=>{
         let mounted = true;
         getUsers()
         .then(items => {
             if(mounted) {
-            setUsers(items);
+                setUser(items[0]);
             }
         });
         return () => mounted = false;
@@ -18,8 +18,7 @@ const User = () => {
 
     return (
         <div style={{display:'inline'}}>
-            <span>{users.length}</span>
-            <button>Login</button>
+            <span>User: {user.name}</span>
         </div>
     )
 };

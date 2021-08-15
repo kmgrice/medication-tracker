@@ -8,7 +8,7 @@ const Header= () => {
     return (
         <div className='header'>
             <h1>Medication Tracker</h1>
-            Logged in: <User />
+                <User />
             <hr/>
         </div>
     );
