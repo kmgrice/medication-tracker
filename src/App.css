@@ -34,3 +34,8 @@
 .wrapper {
   padding: 15px;
 }
+
+.users {
+  border: 1px solid black;
+}
+

@@ -1,9 +1,7 @@
 import React from 'react';
 
 const Header= () => {
-    console.log('header');
-
-    return (
+     return (
         <div className='header'>
             <h1>Medication Tracker</h1>
             <hr/>

@@ -15,12 +15,34 @@ const Main = () => {
         return () => mounted = false;
     }, []);
 
+    function doAdd() {
+      alert('Add');
+    }
+    
+
     return (
-      <div className='wrapper'>
-        <h1>Users</h1>
-        <ul>
-          {users.map(item=><li key={item.id}>{item.name}</li>)}
-        </ul>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-5'>
+            <label><b>Users</b></label>
+            <table className='table table-bordered table-striped'>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Kevin</td>
+                <td><button className='btn btn-primary' onClick={doAdd}>Add</button></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     )
 
