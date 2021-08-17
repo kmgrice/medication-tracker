@@ -37,7 +37,7 @@ const Main = () => {
               <tr>
                 <td>1</td>
                 <td>Kevin</td>
-                <td><button className='btn btn-primary' onClick={doAdd}>Add</button></td>
+                <td><button className='btn btn-xs btn-primary' onClick={doAdd}>Add</button></td>
               </tr>
               </tbody>
             </table>
